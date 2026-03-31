@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Altura Design System — Dark Theme (default) */
+    --background: 220 47% 5%;
+    --foreground: 210 40% 95%;
+
+    --card: 220 47% 8%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 220 47% 8%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 38 45% 61%;
+    --primary-foreground: 220 47% 5%;
+
+    --secondary: 220 40% 15%;
+    --secondary-foreground: 210 40% 95%;
+
+    --muted: 220 40% 12%;
+    --muted-foreground: 215 20% 60%;
+
+    --accent: 38 45% 61%;
+    --accent-foreground: 220 47% 5%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 40% 20%;
+    --input: 220 40% 15%;
+    --ring: 38 45% 61%;
+
+    --radius: 0.5rem;
+
+    /* Altura Custom Properties */
+    --altura-navy: #0A1628;
+    --altura-navy-surface: #0F1F3D;
+    --altura-navy-elevated: #162040;
+    --altura-gold: #C5A572;
+    --altura-gold-muted: #B08A52;
+    --altura-border: #1A2F55;
+    --altura-text-primary: #F1F5F9;
+    --altura-text-secondary: #94A3B8;
+    --altura-text-muted: #64748B;
+
+    /* Status Colors */
+    --status-positive: #22C55E;
+    --status-negative: #EF4444;
+    --status-warning: #F59E0B;
+    --status-info: #3B82F6;
+    --status-neutral: #94A3B8;
+
+    /* Sidebar */
+    --sidebar-width: 240px;
+    --sidebar-collapsed-width: 64px;
+    --topnav-height: 60px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-color: var(--altura-navy);
+    color: var(--altura-text-primary);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--altura-navy);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--altura-border);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2A4070;
+  }
+}
+
+@layer components {
+  /* Altura Card */
+  .altura-card {
+    @apply rounded-lg border;
+    background-color: var(--altura-navy-surface);
+    border-color: var(--altura-border);
+  }
+
+  /* Gold accent line */
+  .gold-accent-line {
+    @apply h-0.5 w-12 rounded-full;
+    background: linear-gradient(90deg, var(--altura-gold) 0%, transparent 100%);
+  }
+
+  /* Metric value typography */
+  .metric-value {
+    @apply text-2xl font-semibold tracking-tight;
+    color: var(--altura-text-primary);
+  }
+
+  /* Status badge */
+  .status-positive {
+    color: var(--status-positive);
+    background-color: rgba(34, 197, 94, 0.1);
+  }
+
+  .status-negative {
+    color: var(--status-negative);
+    background-color: rgba(239, 68, 68, 0.1);
+  }
+
+  .status-warning {
+    color: var(--status-warning);
+    background-color: rgba(245, 158, 11, 0.1);
+  }
+}
