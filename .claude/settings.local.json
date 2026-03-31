@@ -8,7 +8,10 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git branch:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(find /c/Users/mkene/Code/Altura/.claude/worktrees/eloquent-chebyshev -not -path */node_modules/* -not -path */.git/* -not -path */.next/*)",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)"
     ]
   }
 }
