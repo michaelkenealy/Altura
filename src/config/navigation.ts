@@ -7,6 +7,7 @@ import {
   Settings,
   Users,
   Briefcase,
+  LineChart,
   type LucideIcon,
 } from "lucide-react";
 
@@ -36,6 +37,11 @@ export const navigationConfig: NavGroup[] = [
   {
     label: "Investment",
     items: [
+      {
+        label: "Buyside",
+        href: "/dashboard/buyside",
+        icon: LineChart,
+      },
       {
         label: "Funds",
         href: "/dashboard/funds",
